@@ -1,5 +1,7 @@
 # prac3IA
 Miembros de la práctica: Javier Rozalén, Alejandro Figari, Juan Antonio Peregrina, Jorge Ángel Vázquez, Sergio Díaz y Gabriel Lazovsky
+
+
 Explicación de Repositorio: Predicción de Propiedades Moleculares con Inteligencia Artificial
 
 En esta práctica, se utilizan técnicas de IA para modelar y prever el CCS de una variedad de moléculas, lo que ofrece un enfoque eficiente y escalable para estudiar propiedades moleculares que tradicionalmente requieren métodos experimentales costosos y que pueden ser complicados de obtener.
