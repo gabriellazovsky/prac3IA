@@ -1,5 +1,6 @@
 <font size="8">Práctica 3<br>
-Predicción de propiedades moleculares mediante un modelo de machine learning</font>
+---------------------------------------------------------------------------- Predicción de propiedades moleculares mediante un modelo de machine learning</font>
+
 
 **Equipo de trabajo**
 
@@ -13,18 +14,18 @@ Predicción de propiedades moleculares mediante un modelo de machine learning</f
 # Contenido
 
 1. Introducción
-1. Implementación del código
+2. Implementación del código
     1. Pasos previos
-    1. Preprocesamiento de los datos
-    1. Entrenamiento del modelo y estimación del error
+    2. Preprocesamiento de los datos
+    3. Entrenamiento del modelo y estimación del error
         - Otros modelos probados        
-    1. Generación de predicciones y exportación de resultados
-1. Análisis de los resultados
+    4. Generación de predicciones y exportación de resultados
+3. Análisis de los resultados
     1. Predicciones vs. Valores reales en el conjunto de validación
-    1. Errores vs. Predicciones en el conjunto de validación
-    1. Distribución de Predicciones vs. Valores reales en el conjunto de validación
-    1. Importancia de características
-1. Conclusiones
+    2. Errores vs. Predicciones en el conjunto de validación
+    3. Distribución de Predicciones vs. Valores reales en el conjunto de validación
+    4. Importancia de características
+4. Conclusiones
 
 # Introducción
 
@@ -32,8 +33,15 @@ En el ámbito de la química computacional y el aprendizaje automático, la pred
 
 Esta práctica tiene como objetivo desarrollar un modelo de aprendizaje automático capaz de predecir la CCS de nuevas moléculas, utilizando como base datos preprocesados que incluyen descriptores moleculares, fingerprints estructurales y características categóricas. La implementación de un modelo predictivo robusto permitirá optimizar recursos en laboratorios, facilitar la identificación molecular y ampliar las bases de datos de referencia con valores calculados de CCS.
 
-A lo largo de este trabajo se presentan las técnicas empleadas para el preprocesamiento de los datos, el entrenamiento y ajuste de un modelo, la estimación del error cometido sobre un conjunto de validación empleando como métrica el Median Absolute Error (MEDAE) y la generación de predicciones y exportación de los resultados.
+A lo largo de este trabajo se presentan las técnicas empleadas para el preprocesamiento de los datos, el entrenamiento y ajuste de un modelo, la estimación del error cometido sobre un conjunto de validación empleando como métrica el Median Absolute Error (MEDAE), por su robustez frente a valores atípicos y su capacidad para penalizar desviaciones de manera uniforme, y la generación de predicciones y exportación de los resultados.
+- El archivo public_train.csv contiene las características y valores objetivo utilizados para entrenar los modelos. Por otro lado, public_test.csv incluye únicamente las características, sobre las cuales se generan las predicciones(test_preds.csv).
 
 Durante el desarrollo de la práctica se probaron dos modelos (**RandomForestRegressor** y **LightGBM**) y distintas técnicas de optimización de hiperparámetros (**GridSearchCV** y **RandomizedSearchCV**). Asimismo, se realizó una selección de características empleando el modelo **LassoCV**.
+
+Cabe destacar que para las experimentaciones y visualización del código nos hemos apoyado en Google Colab, facilitando así el acceso a recursos computacionales y la ejecución colaborativa del trabajo.
+
+Para garantizar la correcta instalación de las dependencias, se recomienda utilizar el siguiente comando para instalar la librería LightGBM desde Anaconda:
+
+`conda install -c conda-forge lightgbm`
 
 Finalmente, se realiza un análisis de resultados, se evalúan las limitaciones encontradas, posibles mejoras y lecciones aprendidas.
