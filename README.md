@@ -1,18 +1,39 @@
-# prac3IA
-Miembros de la práctica: Javier Rozalén, Alejandro Figari, Juan Antonio Peregrina, Jorge Ángel Vázquez, Sergio Díaz y Gabriel Lazovsky
+<font size="8">Práctica 3<br>
+Predicción de propiedades moleculares mediante un modelo de machine learning</font>
 
+**Equipo de trabajo**
 
-Explicación de Repositorio: Predicción de Propiedades Moleculares con Inteligencia Artificial
+- Juan Antonio Peregrina
+- Sergio Díaz
+- Alejandro Figari
+- Jorge Ángel Vázquez
+- Javier Rozalén
+- Gabriel Lazovsky
 
-En esta práctica, se utilizan técnicas de IA para modelar y prever el CCS de una variedad de moléculas, lo que ofrece un enfoque eficiente y escalable para estudiar propiedades moleculares que tradicionalmente requieren métodos experimentales costosos y que pueden ser complicados de obtener.
+# Contenido
 
-Algunos objetivos del repositorio:
+1. Introducción
+1. Implementación del código
+    1. Pasos previos
+    1. Preprocesamiento de los datos
+    1. Entrenamiento del modelo y estimación del error
+        - Otros modelos probados        
+    1. Generación de predicciones y exportación de resultados
+1. Análisis de los resultados
+    1. Predicciones vs. Valores reales en el conjunto de validación
+    1. Errores vs. Predicciones en el conjunto de validación
+    1. Distribución de Predicciones vs. Valores reales en el conjunto de validación
+    1. Importancia de características
+1. Conclusiones
 
-- Implementar y entrenar modelos de IA para predecir el CCS de moléculas.
-- Generación de predicciones
-- Evaluar la precisión y la efectividad de diferentes modelos de IA aplicados a este problema.
+# Introducción
 
+En el ámbito de la química computacional y el aprendizaje automático, la predicción de propiedades moleculares ha surgido como una herramienta fundamental para acelerar procesos en áreas como el desarrollo de fármacos y la identificación de compuestos químicos. Entre estas propiedades, la Collision Cross Section (CCS) es particularmente relevante en espectrometría de masas, ya que describe cómo interactúan las moléculas con partículas en su entorno. La CCS es clave para identificar moléculas desconocidas comparando sus valores medidos con bases de datos de referencia. Sin embargo, los procedimientos experimentales para medir la CCS suelen ser costosos y laboriosos.
 
-Aplicaciones: Este tipo de predicción tiene aplicaciones en áreas como la química analítica, la medicina (por ejemplo, en el diseño de medicamentos) y la ingeniería de materiales, donde la capacidad de predecir interacciones moleculares y comportamientos físicos de las sustancias puede acelerar el desarrollo de nuevos compuestos.
+Esta práctica tiene como objetivo desarrollar un modelo de aprendizaje automático capaz de predecir la CCS de nuevas moléculas, utilizando como base datos preprocesados que incluyen descriptores moleculares, fingerprints estructurales y características categóricas. La implementación de un modelo predictivo robusto permitirá optimizar recursos en laboratorios, facilitar la identificación molecular y ampliar las bases de datos de referencia con valores calculados de CCS.
 
-El repositorio de esta práctica está orientado tanto a la investigación académica como a la aplicación práctica de métodos de IA en química computacional, proporcionando recursos y herramientas para continuar con la exploración y el análisis de moléculas y sus propiedades.
+A lo largo de este trabajo se presentan las técnicas empleadas para el preprocesamiento de los datos, el entrenamiento y ajuste de un modelo, la estimación del error cometido sobre un conjunto de validación empleando como métrica el Median Absolute Error (MEDAE) y la generación de predicciones y exportación de los resultados.
+
+Durante el desarrollo de la práctica se probaron dos modelos (**RandomForestRegressor** y **LightGBM**) y distintas técnicas de optimización de hiperparámetros (**GridSearchCV** y **RandomizedSearchCV**). Asimismo, se realizó una selección de características empleando el modelo **LassoCV**.
+
+Finalmente, se realiza un análisis de resultados, se evalúan las limitaciones encontradas, posibles mejoras y lecciones aprendidas.
