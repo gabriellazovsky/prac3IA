@@ -1,5 +1,5 @@
-<font size="8">Práctica 3<br>
-Predicción de propiedades moleculares mediante un modelo de machine learning</font>
+# Práctica 3
+# Predicción de propiedades moleculares mediante un modelo de machine learning
 
 **Equipo de trabajo**
 
